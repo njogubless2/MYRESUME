@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --header-bg-color: #fff;
+    --header-text-color: #333;
+    --job-bg-color: #f4f4f4;
+    --job-border-color: #ddd;
+    --link-color: #007BFF;
+}
+
+.dark-mode {
+    --bg-color: #333;
+    --text-color: #f4f4f4;
+    --header-bg-color: #444;
+    --header-text-color: #f4f4f4;
+    --job-bg-color: #444;
+    --job-border-color: #555;
+    --link-color: #1E90FF;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+    background: var(--header-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--header-text-color);
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: var(--header-text-color);
+}
+
+header a {
+    display: block;
+    margin: 5px 0;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--link-color);
+}
+
+button#toggle-theme {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: var(--link-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button#toggle-theme:hover {
+    background-color: #0056b3;
+}
+
+section {
+    margin: 20px 0;
+}
+
+section h2 {
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: var(--job-bg-color);
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid var(--job-border-color);
+}
+
+.collapsible {
+    background-color: var(--job-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.active, .collapsible:hover {
+    background-color: var(--job-border-color);
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--job-bg-color);
+}
