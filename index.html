@@ -1,72 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bless' Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="container">
+        <nav>
+            <div class="navbar" id="">
+                <a href="#Home">Home</a>
+                <a href="#About-Me">About Me</a>
+                <a href="#Portfolio">Portfolio</a>
+                <a href="#Contact">Contact</a>
+            </div>
+        </nav>
         <header>
-            <h1>Paul Njogu</h1>
-            <p>Software Developer</p>
-            <a href="mailto:njogubless2@gmail.com">njogubless2@gmail.com</a>
-            <a href="tel:+254746179799">+254746179799</a>
-            <button id="toggle-theme">Toggle Dark Mode</button>
+            <div class="intro">
+                <h1></h1>
+                <p>Software Developer</p>
+                <a href="mailto:njogubless2@gmail.com">njogubless2@gmail.com</a>
+                <a href="tel:+254746179799">+254746179799</a>
+                <button id="toggle-theme">Toggle Dark Mode</button>
+            </div>
+        
         </header>
-        <section class="summary">
-            <h2>Summary</h2>
-            <p>Bless is a skilled DevOps engineer who utilizes engineering principles to seamlessly release quality software from His own experience in building cross-platform applications.</p>
-        </section>
-        <section class="experience">
+
+        <div class="about" id="About Paul Njogu">
+            <h1><span>About </span> Me</h1>
+            <div class="interests">
+                <p>Paul Njogu is a skilled DevOps engineer who utilizes engineering principles to seamlessly release quality software from his own experience in building cross-platform applications.</p>
+            </div>
+        </div>
+
+        <section id="experience">
             <h2>Experience</h2>
-            <button type="button" class="collapsible">Developer Operations Engineer Intern - Ndovu Cloud | April 2023 - November 2023</button>
-            <div class="content">
-                <ul>
-                    <li>Developed and maintained APIs using Django framework by building the backend system of the company's responsive web-application.</li>
-                    <li>Deployed the backend system using Docker and orchestrated the containers using Kubernetes.</li>
-                    <li>Provisioned Infrastructure using Terraform, monitored logs using Prometheus, and created log dashboards using Grafana.</li>
-                    <li>Setup CI/CD pipelines using TravisCI and Digital Ocean as the cloud provider.</li>
-                </ul>
-            </div>
-            <button type="button" class="collapsible">Software Developer - XYZ Company | Jun 2015 - Dec 2019</button>
-            <div class="content">
-                <ul>
-                    <li>Designed and developed cross-platform applications using Flutter and Dart.</li>
-                    <li>Contributed to open-source projects for CloudMyTribe Community.</li>
-                    <li>Deployed projects on AWS based on certifications.</li>
-                </ul>
+            <div class="experience row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <button type="button" class="collapsible">Developer Operations Engineer Intern - Ndovu Cloud | April 2023 - November 2023</button>
+                        <div class="content">
+                            <ul>
+                                <li>Developed and maintained APIs using Django framework by building the backend system of the company's responsive web-application.</li>
+                                <li>Deployed the backend system using Docker and orchestrated the containers using Kubernetes.</li>
+                                <li>Provisioned Infrastructure using Terraform, monitored logs using Prometheus, and created log dashboards using Grafana.</li>
+                                <li>Setup CI/CD pipelines using TravisCI and Digital Ocean as the cloud provider.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <button type="button" class="collapsible">Hikers Afrique | Jan 2024 - todate</button>
+                        <div class="content">
+                            <ul>
+                                <li>Designed and developed cross-platform applications using Flutter and Dart.</li>
+                                <li>Maintained the company's application after deployment in appstore and playstore.</li>
+                                <li> Continued upgrading features on the HikersAfrque Application to match-up customer needs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="education">
+
+        <section id="education">
             <h2>Education</h2>
-            <button type="button" class="collapsible">Bachelor of Computer Information Systems - Kenya Methodist University | 2020 - 2024</button>
-            <div class="content">
-                <p>Gained a solid foundation in computer science principles, including algorithms, data structures, and software engineering.</p>
+            <div class="col-sm-6">
+                <div class="card">
+                    <button type="button" class="collapsible">Bachelor of Computer Information Systems - Kenya Methodist University | 2020 - 2024</button>
+                    <div class="content">
+                        <p>Gained a solid foundation in computer science principles, including algorithms, data structures, and software Delivery</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Flutter and Dart</li>
-                <li>Django</li>
-                <li>RESTful APIs, GraphQL</li>
-                <li>Git, Docker, AWS, Kubernetes, Ansible, Terraform, Azure, CI/CD, Prometheus, Grafana</li>
-            </ul>
+
+        <section id="skills">
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Flutter and Dart</li>
+                    <li>Django</li>
+                    <li>RESTful APIs, GraphQL</li>
+                    <li>Git, Docker, AWS, Kubernetes, Ansible, Terraform, Azure, CI/CD, Prometheus, Grafana</li>
+                </ul>
+            </div>
         </section>
-        <section class="certifications">
+
+        <section id="certifications">
             <h2>Certifications</h2>
-            <button type="button" class="collapsible">AWS Certified Solutions Architect</button>
-            <div class="content">
-                <p>Issued by Amazon Web Services, this certification validates expertise in designing and deploying scalable systems on AWS.</p>
-            </div>
-            <button type="button" class="collapsible">Certified Kubernetes Administrator</button>
-            <div class="content">
-                <p>Issued by the Cloud Native Computing Foundation, this certification demonstrates proficiency in Kubernetes administration.</p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <button type="button" class="collapsible">AWS Certified Solutions Architect</button>
+                        <div class="content">
+                            <p>Issued by Amazon Web Services, this certification validates expertise in designing and deploying scalable systems on AWS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <button type="button" class="collapsible">Certified Kubernetes Administrator</button>
+                        <div class="content">
+                            <p>Issued by the Cloud Native Computing Foundation, this certification demonstrates proficiency in Kubernetes administration.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+
     <script src="scripts.js"></script>
 </body>
+
 </html>

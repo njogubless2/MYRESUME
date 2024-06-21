@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -13,9 +13,11 @@ body {
     --text-color: #333;
     --header-bg-color: #fff;
     --header-text-color: #333;
-    --job-bg-color: #f4f4f4;
+    --job-bg-color: #fff;
     --job-border-color: #ddd;
     --link-color: #007BFF;
+    --accent-color: #FF6347; /* Tomato */
+    --accent-color-light: #FFDAB9; /* Peach Puff */
 }
 
 .dark-mode {
@@ -26,6 +28,8 @@ body {
     --job-bg-color: #444;
     --job-border-color: #555;
     --link-color: #1E90FF;
+    --accent-color: #FF6347;
+    --accent-color-light: #FFDAB9;
 }
 
 .container {
@@ -35,17 +39,54 @@ body {
     padding: 20px;
     background: var(--header-bg-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.navbar {
+    padding-left: 20vw;
+    padding-top: 2vw;
+    background-color: white;
+    z-index: 2;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.navbar a {
+    padding-right: 2vw;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    background-image: url("assets/pic4.jpg");
+    background-size: 180%;  /* Increase image size (adjust as needed) */
+    background-position: center; 
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+    height: 300px;
+}
+.intro {
+    color: white; 
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); 
     text-align: center;
-    padding: 20px 0;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
     color: var(--header-text-color);
+    border-left: 8px solid var(--accent-color);
+    padding-left: 10px;
 }
 
 header p {
@@ -62,7 +103,35 @@ header a {
 }
 
 header a:hover {
-    color: var(--link-color);
+    color: var(--accent-color);
+}
+
+
+
+.about, .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3vw 10vw 5vw 10vw;
+    color: #32333c;
+}
+
+.about h1 span, .skills h2 {
+    color: var(--accent-color);
+}
+
+.experience, .certifications {
+    margin: 5vw 0;
+}
+
+.card {
+    border: 1px solid var(--job-border-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--job-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 button#toggle-theme {
@@ -71,33 +140,12 @@ button#toggle-theme {
     background-color: var(--link-color);
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 button#toggle-theme:hover {
     background-color: #0056b3;
-}
-
-section {
-    margin: 20px 0;
-}
-
-section h2 {
-    border-bottom: 2px solid var(--text-color);
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: var(--job-bg-color);
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid var(--job-border-color);
 }
 
 .collapsible {
@@ -110,10 +158,11 @@ ul li {
     text-align: left;
     outline: none;
     font-size: 1.2em;
+    border-bottom: 2px solid var(--accent-color-light);
 }
 
 .active, .collapsible:hover {
-    background-color: var(--job-border-color);
+    background-color: var(--accent-color-light);
 }
 
 .content {
@@ -121,4 +170,19 @@ ul li {
     display: none;
     overflow: hidden;
     background-color: var(--job-bg-color);
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skills ul li {
+    display: inline-block;
+    background: var(--accent-color-light);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--text-color);
 }

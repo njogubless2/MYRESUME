@@ -18,4 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    const headerText = "I am Paul Njogu";
+    let currentChar = 0;
+    const headerEl = document.querySelector("header h1");
+
+    const typeWriter = () => {
+        if (currentChar < headerText.length) {
+            headerEl.textContent += headerText.charAt(currentChar);
+            currentChar++;
+            setTimeout(typeWriter, 100);
+        }
+    };
+
+    typeWriter();
 });
