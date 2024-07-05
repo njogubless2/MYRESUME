@@ -1,0 +1,33 @@
+{
+    "id": "12345",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "555-1234",
+    "summary": "Experienced software engineer...",
+    "education": [
+      {
+        "institution": "University of Somewhere",
+        "degree": "BSc in Computer Science",
+        "start_date": "2010-09-01",
+        "end_date": "2014-06-30"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Tech Corp",
+        "position": "Senior Developer",
+        "start_date": "2016-01-01",
+        "end_date": "Present",
+        "responsibilities": [
+          "Developed web applications",
+          "Led a team of developers"
+        ]
+      }
+    ],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "AWS"
+    ]
+  }
+  
